@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <style>
+        body {
+            background: plum;
+            font: normal 20px Arial;
+            color: white;
+        }
+        
+        #menu {
+            background-color: white;
+            color: plum;
+            margin: 20px;
+            padding: 4px 500px;
+        }
+        
+        #somastyle {
+            margin-top: 20px;
+            padding: 4px 500px;
+        }
+        
+        #somastyle2 {
+            margin-top: 20px;
+            padding: 4px 500px;
+        }
+        
+        #somastyle3 {
+            margin-top: 20px;
+            padding: 4px 500px;
+        }
+        
+        #somastyle4 {
+            margin-top: 20px;
+            padding: 4px 500px;
+        }
+        
+        #botao {
+            font: normal 15px Arial;
+            color: white;
+            background-color: blueviolet;
+            border-radius: 10px;
+        }
+        
+        #res {
+            margin-top: 10px;
+        }
+        
+        #res2 {
+            margin-top: 10px;
+        }
+        
+        #res3 {
+            margin-top: 10px;
+        }
+        
+        #res4 {
+            margin-top: 10px;
+        }
+        
+        #botao2 {
+            font: normal 15px Arial;
+            color: white;
+            background-color: blueviolet;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="menu">
+        <h1>Calculadora</h1>
+    </div>
+
+
+    <div id="somastyle">
+        <p>Soma</p>
+        <input type="number" name="txtn1" id="txtn1"> +
+        <input type="number" name="txtn2" id="txtn2">
+        <input type="button" id="botao" value="Somar" onclick="somar()">
+        <div id="res"> Resultado</div>
+
+    </div>
+
+    <div id="somastyle2">
+        <p>Subtração</p>
+        <input type="number" name="txtn3" id="txtn3"> -
+        <input type="number" name="txtn4" id="txtn4">
+        <input type="button" id="botao2" value="Subtrair" onclick="sub()">
+        <div id="res2"> Resultado</div>
+    </div>
+
+    <div id="somastyle3">
+        <p>Multiplicação</p>
+        <input type="number" name="txtn5" id="txtn5"> *
+        <input type="number" name="txtn6" id="txtn6">
+        <input type="button" id="botao2" value="Multiplicar" onclick="mut()">
+        <div id="res3"> Resultado</div>
+    </div>
+
+    <div id="somastyle4">
+        <p>Divisão</p>
+        <input type="number" name="txtn7" id="txtn7"> /
+        <input type="number" name="txtn8" id="txtn8">
+        <input type="button" id="botao2" value="Dividir" onclick="divisao()">
+        <div id="res4"> Resultado</div>
+    </div>
+
+
+    <script>
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1');
+            var tn2 = window.document.getElementById('txtn2');
+            var res = window.document.getElementById('res');
+            var n1 = Number(tn1.value);
+            var n2 = Number(tn2.value);
+            var s = n1 + n2;
+
+            res.innerHTML = `O resultado é ${s}`
+        }
+
+        function sub() {
+            var tn1 = window.document.getElementById('txtn3');
+            var tn2 = window.document.getElementById('txtn4');
+            var res = window.document.getElementById('res2');
+            var n1 = Number(tn1.value);
+            var n2 = Number(tn2.value);
+            var s = n1 - n2;
+
+            res2.innerHTML = `O resultado é ${s}`
+        }
+
+        function mut() {
+            var tn1 = window.document.getElementById('txtn5');
+            var tn2 = window.document.getElementById('txtn6');
+            var res = window.document.getElementById('res3');
+            var n1 = Number(tn1.value);
+            var n2 = Number(tn2.value);
+            var s = n1 * n2;
+
+            res3.innerHTML = `O resultado é ${s}`
+        }
+
+        function divisao() {
+            var tn1 = window.document.getElementById('txtn7');
+            var tn2 = window.document.getElementById('txtn8');
+            var res = window.document.getElementById('res4');
+            var n1 = Number(tn1.value);
+            var n2 = Number(tn2.value);
+            var s = n1 / n2;
+
+            res4.innerHTML = `O resultado é ${s}`
+        }
+    </script>
+</body>
+
+</html>
